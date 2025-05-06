@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>NFC Security Awareness</title>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
       padding: 40px;
       background: linear-gradient(to right, #ffebee, #ffffff);
       color: #333;
@@ -38,6 +45,10 @@
       border-radius: 10px;
       margin: 15px 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    img:hover {
+      transform: scale(1.03);
     }
     ul {
       margin-left: 20px;
@@ -51,6 +62,10 @@
     a.source {
       color: #c62828;
       text-decoration: underline;
+    }
+    #prototypes div:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: box-shadow 0.3s ease-in-out;
     }
   </style>
 </head>
@@ -68,7 +83,7 @@
     <a href="#contact">Contact</a>
   </div>
 
-  <section id="what-is-nfc">
+  <section id="what-is-nfc" data-aos="fade-up">
     <h2>What is NFC?</h2>
     <p>NFC (Near Field Communication) is an evolution of RFID technology. It enables secure wireless connectivity between two devices when they are close to each other. This allows for the quick exchanges of data.</p>
     <p>Common uses include:</p>
@@ -79,13 +94,13 @@
     </ul>
   </section>
 
-  <section id="tags">
+  <section id="tags" data-aos="fade-up">
     <h2>NFC Tags</h2>
     <p>NFC tags are small RFID transponders operating at 13.56 MHz. Each has a unique ID and rewritable memory. These chips get power from nearby NFC-enabled devices like smartphones.</p>
     <p>When tapped by an NFC-enabled device, tags can trigger actions such as opening links, saving contact info, or executing commands.</p>
   </section>
 
-  <section id="features">
+  <section id="features" data-aos="fade-up">
     <h2>Key Features of NFC</h2>
     <ul>
       <li>Data Storage: Holds small data like URLs or text</li>
@@ -103,33 +118,38 @@
     </ul>
   </section>
 
-  <section id="risks">
+  <section id="risks" data-aos="fade-up">
     <h2>Security Risks to Be Aware Of</h2>
     <ul>
       <li><strong>Data Tampering:</strong> Modified terminals can reroute your payment or data. Example: Hackers altered an NFC payment kiosk in Europe to collect credit info silently.</li>
       <li><strong>Eavesdropping:</strong> A third-party nearby intercepts communication. While rare due to short range, this is still possible with specialized equipment in crowded places like airports.</li>
-      <li><strong>Malware Injection:</strong> In 2019, Android’s Beam feature allowed silent malware installation via NFC. ([ZDNet Report](https://www.zdnet.com/article/android-nfc-beam-vulnerability-lets-attackers-install-malware/))</li>
+      <li><strong>Malware Injection:</strong> In 2019, Android’s Beam feature allowed silent malware installation via NFC. (<a href="https://www.zdnet.com/article/android-nfc-beam-vulnerability-lets-attackers-install-malware/">ZDNet Report</a>)</li>
       <li><strong>Relay Attacks:</strong> Two attackers simulate a transaction: one near the card, the other at the terminal.</li>
       <li><strong>Cloning/Spoofing:</strong> NFC badges or transit cards can be duplicated using cheap tools, allowing unauthorized access.</li>
-      <li><strong>Skimming:</strong> Involves discreetly scanning a card/phone in your pocket in public spaces. Common in places like subways or crowded malls. ([Kaspersky Guide](https://www.kaspersky.com/resource-center/threats/nfc-attacks))</li>
+      <li><strong>Skimming:</strong> Involves discreetly scanning a card/phone in your pocket in public spaces. Common in places like subways or crowded malls. (<a href="https://www.kaspersky.com/resource-center/threats/nfc-attacks">Kaspersky Guide</a>)</li>
       <li><strong>Social Engineering:</strong> Attackers use fake NFC posters or promotions to trick users into scanning dangerous tags.</li>
       <li><strong>Replay Attacks:</strong> Captured data is reused later to mimic a real transaction.</li>
       <li><strong>Incorrect Payment Amounts:</strong> Without confirmation screens, malicious terminals can overcharge users silently.</li>
     </ul>
   </section>
 
-  <section id="prototypes">
+  <section id="prototypes" data-aos="fade-up">
     <h2>Innov8 Prototypes to Address NFC Risks</h2>
-
-    <h3>1. NFC Authentication Phone Charm</h3>
-    <p>A small accessory with fingerprint ID that blocks the phone’s NFC signal unless authenticated by the user. This ensures NFC is never active unless explicitly permitted.</p>
-    <p>Perfect for commuters, travelers, or those who frequently attend conferences and tap-based check-ins.</p>
-
-    <h3>2. NFC-Blocking Phone Case with Slider</h3>
-    <p>This phone case has a manual slider backed by magnets. When closed, the NFC antenna is physically shielded. It’s easy to use, durable, and adds minimal bulk to the phone.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <div style="flex: 1; min-width: 250px;">
+        <h3>1. AutheniCharm</h3>
+        <img src="IMG_8788.jpeg" alt="AutheniCharm Prototype">
+        <p>A compact phone charm embedded with a fingerprint reader. It blocks NFC access until the user verifies their identity, providing biometric-controlled communication.</p>
+      </div>
+      <div style="flex: 1; min-width: 250px;">
+        <h3>2. SafeCase</h3>
+        <img src="IMG_8784.jpeg" alt="SafeCase Prototype">
+        <p>This NFC-blocking phone case features a manual slider backed by magnets, offering physical control over NFC signal exposure. Sleek, secure, and simple.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="why-ours">
+  <section id="why-ours" data-aos="fade-up">
     <h2>Why Choose Our Case?</h2>
     <p>Our phone case is not just another accessory—it’s a necessity in today’s tech heav7 world. We designed this with practical real-life scenarios in mind, such as:</p>
     <ul>
@@ -141,15 +161,15 @@
     <ul>
       <li>Standard: Slider</li>
       <li>Extended: Fingerprint Charm</li>
+    </ul>
     <p>The phone case uses a layer of conductive metal—either aluminum or copper—strategically placed to block the electromagnetic signals used in NFC communication. This physical barrier prevents unauthorized NFC interactions when the slider is closed.</p>
     <p>The slider is manual and magnetic, allowing the user to physically expose or hide the NFC antenna area. However, in the extended model, the NFC slider stays closed unless the fingerprint on the charm is verified—allowing it to automatically open the antenna area only for the owner.</p>
     <p>This dual-level blocking mechanism (manual and biometric) ensures convenience while maximizing control and protection.</p>
     <p>Unlike generic cases that incidentally block NFC, this case is <strong>purpose-built</strong> for NFC security. It is one of the few on the market that integrates both physical shielding and biometric bypass functionality.</p>
-    </ul>
     <p><strong>Release Date:</strong> August 2025 — <em>Pre-sale signups open now!</em></p>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact Us for Pre-Sale</h2>
     <form>
       <label for="name">Name:</label>
@@ -163,7 +183,7 @@
     </form>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <h3>Sources & References</h3>
     <ul>
       <li><a href="https://www.zdnet.com/article/android-nfc-beam-vulnerability-lets-attackers-install-malware/" class="source">ZDNet: Android NFC Vulnerability</a></li>
@@ -187,5 +207,12 @@
     <p>&copy; 2025 Innov8 ENGR </p>
   </footer>
 
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
+
